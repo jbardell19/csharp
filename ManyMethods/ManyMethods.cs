@@ -34,6 +34,8 @@ namespace ManyMethods
 		static void addition()
 		{
 			Console.WriteLine("What numbers would you like to add");
+			string name = Console.ReadLine();
+            if
 		}
 
 
