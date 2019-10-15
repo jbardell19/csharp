@@ -6,7 +6,17 @@ namespace ManyMethods
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            //Console.WriteLine("Hello World!");
+            Hello();
+            Addition();
+            CatDog();
+            oddEvent();
+            inches();
+            echo();
+            killGrams();
+            date();
+            age();
+            guess();
+
         }
-    }
-}
+       
