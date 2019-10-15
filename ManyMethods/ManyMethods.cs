@@ -19,4 +19,17 @@ namespace ManyMethods
             guess();
 
         }
+
+        static void hello ()
+		{
+            Console.WriteLine ("Hello! What is your name?")
+
+
+
+
+                }
+
+
+           
+
        
