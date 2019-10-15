@@ -83,6 +83,9 @@ namespace ManyMethods
 		static void guess()
 		{
 			Console.WriteLine("Guess what word I'm thinking of?");
+            //if else
+            if==(answer"csharp")
+
 		}
 
 
