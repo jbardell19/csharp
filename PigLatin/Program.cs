@@ -7,6 +7,8 @@ namespace PigLatin
 {
     class Program
     {
+        private const string V = "yay";
+
         public static void Main(string[] args)
         {
             Console.Write("Enter a word or sentence to be converted to Pig Latin:");
@@ -37,7 +39,7 @@ namespace PigLatin
                     {
                         string firstHalf = word.Substring(0, firstVowelPosition);
                         string secondHalf = word.Substring(firstVowelPosition);
-                        Console.WriteLine(secondHalf + firstHalf + "yay");
+                        Console.WriteLine(secondHalf + firstHalf + V);
                     }
 
                 }
