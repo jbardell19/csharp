@@ -16,7 +16,6 @@ namespace PoCos
             firstLicense.GetFullName();
             Console.ReadKey();
         }
-
     }
     class DriverLicense
     {
@@ -56,8 +55,6 @@ namespace PoCos
         public int sku;
         public string publisher;
         public double price;
-
-
     }
     class Airplane
     {
@@ -66,7 +63,5 @@ namespace PoCos
         public string variant;
         public int capacity;
         public int engines;
-
-
     }
 }
