@@ -45,7 +45,7 @@ namespace TicTacToe
                 }
                 else
                 {
-                    Console.WriteLine("Sorry the row {0} is already marked with {1}", choice, arr[choice]);
+                    Console.WriteLine("Error: Sorry the row {0} is already marked with {1}", choice, arr[choice]);
                 }
                 flag = CheckWin();
             } while (flag != 1 && flag != -1);
@@ -54,10 +54,10 @@ namespace TicTacToe
             switch (flag)
             {
                 case 1:
-                    Console.WriteLine("Player {0} has won", (player % 2) + 1);
+                    Console.WriteLine("Game Over!! Player {0} has won!!", (player % 2) + 1);
                     break;
                 default:
-                    Console.WriteLine("Draw");
+                    Console.WriteLine("Draw: This game ended in a tie");
                     break;
             }
             Console.ReadLine();
