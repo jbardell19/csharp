@@ -11,7 +11,8 @@ namespace PoCos
         static void Main(string[] args)
         {
             DriverLicense firstLicense = new DriverLicense("Jared", "Bardell", "Male", 71990583);
-            Console.WriteLine("Hello, my name is {0} {1}, and I am a {2}. My driver's license number is: {3}", firstLicense.firstName, firstLicense.lastName, firstLicense.gender, firstLicense.licenseNumber);
+            Console.WriteLine("Hello, my name is {0} {1}, and I am a {2}. My driver's license number is: {3}",
+            firstLicense.firstName, firstLicense.lastName, firstLicense.gender, firstLicense.licenseNumber);
             firstLicense.GetFullName();
             Console.ReadKey();
         }
