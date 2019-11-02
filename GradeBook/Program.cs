@@ -9,21 +9,20 @@ namespace Gradebook
 		static string userChoice;
 		public static void Main(string[] args)
 		{
-			Dictionary<string, string> Gradebook = new Dictionary<string, string>();
-			Console.WriteLine("Enter the student's full name or type finished when done");
+			Console.WriteLine("Enter the student's full name or type 'finished' when done");
 			userChoice = Console.ReadLine().ToLower();
+			Dictionary<string, string> Gradebook = new Dictionary<string, string>();
 			while (userChoice != "finished")
 			{
 				Console.WriteLine("Enter each assignment number grade separated by a space");
 				string studentGrades = Console.ReadLine();
 				Gradebook.Add(userChoice, studentGrades);
-				Console.WriteLine("Enter the student's full name or type finished when done");
+				Console.WriteLine("Enter the student's full name or type 'finished' when done");
 				userChoice = Console.ReadLine().ToLower();
 			}
 			int lowestGrade;
 			int highestGrade;
 			double averageGrade; //var for avg grade
-
 			foreach (string key in Gradebook.Keys)
 			{
 				Console.WriteLine($"Name: {key}");
