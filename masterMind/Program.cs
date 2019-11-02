@@ -12,12 +12,11 @@ namespace masterMind
         static void Main(string[] args)
         {
             Random rnd = new Random();
-
             int colorRandom1 = rnd.Next(1, 4);
             int colorRandom2 = rnd.Next(1, 4);
             do
             {
-                Console.WriteLine(" I am thinking of 2 random colors");
+                Console.WriteLine("I am thinking of 2 random colors");
                 Console.WriteLine("Please choose from red, yellow, & blue");
                 Console.WriteLine("Enter your first color");
                 string colorChoice1 = Console.ReadLine().ToLower();
@@ -52,17 +51,14 @@ namespace masterMind
                     colorB = 3;
                 }
                 getClue(colorRandom1, colorRandom2, colorA, colorB);
-
             } while (isRunning);
-
             Console.ReadKey();
         }
-
         public static void getClue(int colorRandom1, int colorRandom2, int colorA, int colorB)
         {
             if (colorRandom1 == colorA && colorRandom2 == colorB)
             {
-                Console.WriteLine("you won!");
+                Console.WriteLine("You guessed correctly! You won!");
                 isRunning = false;
             }
             else if (colorRandom1 != colorA && colorRandom2 != colorB)
