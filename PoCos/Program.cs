@@ -46,12 +46,13 @@ namespace PoCos
     }
     class Book //list//
     {
-        public string title;
+        private string title;
         public string[] authors; 
         public int numberOfPages;
         public int sku;
         public string publisher;
         public double price;
+        public string Title { get => title; set => title = value; }
     }
     class Airplane
     {
