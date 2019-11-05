@@ -21,7 +21,7 @@ namespace PoCos
     {
         public String firstName;
         public String lastName;
-        public string gender;
+        public String gender;
         public int licenseNumber;
         public DriverLicense(string fName, string lName, string Agender, int lNumber)
         {
@@ -29,9 +29,7 @@ namespace PoCos
             lastName = lName;
             gender = Agender;
             licenseNumber = lNumber;
-
         }
-
         public DriverLicense(string fName)
         {
             firstName = fName;
@@ -46,7 +44,6 @@ namespace PoCos
             return FullName;
         }
     }
-
     class Book //list//
     {
         public string title;
