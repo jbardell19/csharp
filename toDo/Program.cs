@@ -33,7 +33,7 @@ namespace toDo
         }
         public static void AskQuestion(string answer, List<ToDoItem> listOfItems)
         {
-            Console.WriteLine("Do you want to add an item to your to do list? type 'y' for yes and 'n' for no");
+            Console.WriteLine("Do you want to add an item to your to do list? Type 'y' for yes and 'n' for no");
             answer = Console.ReadLine();
             while (answer == "y")
             {
@@ -44,7 +44,7 @@ namespace toDo
                 Console.WriteLine("Is this a high, medium, or low priority?");
                 string importance = Console.ReadLine();
                 listOfItems.Add(new ToDoItem(describe, date, importance));
-                Console.WriteLine("Do you wan to add an item to your to do list? type 'y' for yes and 'n' for no");
+                Console.WriteLine("Do you wan to add an item to your to do list? Type 'y' for yes and 'n' for no");
                 answer = Console.ReadLine();
             }
         }
