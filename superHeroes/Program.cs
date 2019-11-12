@@ -58,7 +58,6 @@ namespace SuperHeroes
 		{
             Console.WriteLine("I am {0}. When I am {1}, my super power is {2}", RealName, Name, SuperPower);
 		}
-
 	}
 	public class Villian : Person
 	{
