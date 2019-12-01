@@ -82,5 +82,4 @@ namespace IRentable
             Console.Write("This is a car available to rent. ");
         }
     }
-
 }
