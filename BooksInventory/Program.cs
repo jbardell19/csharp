@@ -22,7 +22,7 @@ namespace Books_Inventory
             {
                 Console.WriteLine($"{b.ID} - {b.Title} by {b.Author}");
             }
-            Console.WriteLine("Do you want to delete a book? Y/N");
+            Console.WriteLine("Would you like to delete a book? Y/N");
             string delete = Console.ReadLine().ToLower();
         }
 
