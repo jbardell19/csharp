@@ -28,7 +28,7 @@ namespace CheckPoint2_ToDo
 				CallItemRep.AddItem(addList[0], addList[1]);
 			}
 
-			else if (Task == "done list")
+			else if (Task == "list done")
 			{
 				List<ToDoItem> DoneList = CallItemRep.ListDoneItem();
 				ConsoleUtils.PrintList(DoneList);

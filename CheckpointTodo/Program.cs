@@ -19,8 +19,4 @@ namespace CheckPoint2_ToDo
 
 		}
 	}
-
-
-
-
 }
