@@ -16,7 +16,6 @@ namespace CheckPoint2_ToDo
 		public void CallsMethods()
 		{
 			string Task = ConsoleUtils.AskForToDo();
-
 			if (Task == "delete")
 			{
 				int GetId = ConsoleUtils.MethodDeleting();
@@ -27,7 +26,6 @@ namespace CheckPoint2_ToDo
 				string[] addList = ConsoleUtils.MethodAdding();  ///task completed
 				CallItemRep.AddItem(addList[0], addList[1]);
 			}
-
 			else if (Task == "list done")
 			{
 				List<ToDoItem> DoneList = CallItemRep.ListDoneItem();
