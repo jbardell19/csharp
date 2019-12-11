@@ -1,21 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-
-namespace CheckPoint2_ToDo
+using Microsoft.EntityFrameworkCore;
+using System.IO;
+namespace Todo_Application
 {
-	class Program
-	{
-		static void Main(string[] args)
-		{
-			do
-			{
-				App app1 = new App();
-				app1.CallsMethods();
-			} while (App.EndProgram());
-		}
-	}
-}
+    enum Priority { none, low, medium, high }
+    enum Sort { ID, Pending, Complete, DateAscending, DateDecending, PritorityAscending, PriorityDescending}
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            App app = new App();
+            
+           
+        }
+    }
+}//TODO make and validate against a list of valid ID's
