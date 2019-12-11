@@ -1,9 +1,9 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
 using System.IO;
-namespace Todo_Application
+namespace CheckpointTodo
 {
-    enum Priority { none, low, medium, high }
+	enum Priority { none, low, medium, high }
     enum Sort { ID, Pending, Complete, DateAscending, DateDecending, PritorityAscending, PriorityDescending}
     class Program
     {

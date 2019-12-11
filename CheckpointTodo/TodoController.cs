@@ -5,9 +5,10 @@ using Microsoft.EntityFrameworkCore;
 using System.IO;
 using System.Linq;
 
-namespace Todo_Application
+namespace CheckpointTodo
+
 {
-    class TodoController: DbContext
+	class TodoController: DbContext
     {
         public DbSet<Todo> Todos { get; set; } 
 

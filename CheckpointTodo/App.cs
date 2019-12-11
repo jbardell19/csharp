@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Todo_Application
+namespace CheckpointTodo
 {
     class App
     {

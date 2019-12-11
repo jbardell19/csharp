@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Todo_Application
+namespace CheckpointTodo
+
 {
-    
-    class Todo
+
+	class Todo
     {
         public int Id { get; private set; }
         public bool Complete { get; set; }
@@ -16,7 +17,7 @@ namespace Todo_Application
         public bool NearDue { get; set; }
         public bool PastDue { get; set; }
         public Priority Priority{get; set;}
-        //Basic Constructor
+        //Basic Construct
         public Todo(string Title, string Description)
         {
             Complete = false;

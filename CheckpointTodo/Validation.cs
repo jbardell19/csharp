@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Todo_Application
+namespace CheckpointTodo
 {
-    class Validation
+	class Validation
     {
         public static int ValidationStringtoInt(string UserInput)
         {

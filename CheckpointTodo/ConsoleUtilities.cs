@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-namespace Todo_Application
+namespace CheckpointTodo
+
 {
-    class ConsoleUtilities
+	class ConsoleUtilities
     {
         static public int MainMenu()
         {
