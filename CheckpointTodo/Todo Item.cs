@@ -25,7 +25,6 @@ namespace Todo_Application
             this.HasDue = false;
             Priority = Priority.none;
         }
-        //Basic constructor plus Due, and detirmine if near due or past due
         public Todo(string Title, string Description, DateTime Due)
         {
             Complete = false;
@@ -36,7 +35,6 @@ namespace Todo_Application
             GetDueStatus();
             Priority = Priority.none;
         }
-        //Basic constructor plus Priority
         public Todo(string Title, string Description, Priority Priority)
         {
             Complete = false;
@@ -45,7 +43,6 @@ namespace Todo_Application
             this.Priority = Priority;
             this.HasDue = false;
         }
-        //Basic Constructor plus Due, dietirmin if near due or past due, and priority
         public Todo(string Title, string Description, DateTime Due, Priority Priority)
         {
             Complete = false;
@@ -56,7 +53,6 @@ namespace Todo_Application
             GetDueStatus();
             this.Priority = Priority;
         }
-        //detirmine if due is past due, or near due. If Due is not set do nothing
         public void GetDueStatus()
         {
             
@@ -71,28 +67,27 @@ namespace Todo_Application
                     PastDue = true;
                 } 
         }
-        //Display Todo information
         public void DisplayTodo()
         {
             String Marker, Time;
-            if (Complete) { Marker = "Complete"; } else { Marker = "Pending"; }// if complete display complete, else display pending
-            if (HasDue) Time = Due.ToShortDateString(); else Time = ""; // if there is a due date display it, otherwise display nothing
-            if (Priority == Priority.medium) Console.ForegroundColor = ConsoleColor.DarkYellow; // if priority is set to medium, set text color to dark yellow
-            else if (Priority == Priority.high) Console.ForegroundColor = ConsoleColor.Red;//if priority is set to high set text color to red
+            if (Complete) { Marker = "Complete"; } else { Marker = "Pending"; }
+            if (HasDue) Time = Due.ToShortDateString(); else Time = ""; 
+            if (Priority == Priority.medium) Console.ForegroundColor = ConsoleColor.DarkYellow; 
+            else if (Priority == Priority.high) Console.ForegroundColor = ConsoleColor.Red;
             Console.Write($"------------------------------------------------------------------------------\n" +
                           $"{Id}. [ {Marker} ]     {Title}          \n" +
                           $"{Description}\n" +
                           $"Due: {Time}        ");
-            if (PastDue)// if past due is true say so
+            if (PastDue)
             {
                 Console.Write("Todo is past due!");
-            }else if (NearDue)//if near due is true say so
+            }else if (NearDue)
             {
                 Console.Write("Todo is nearly due!");
             }
             Console.Write("\n" +
                           "Priority: ");
-            if(Priority != Priority.none)// if priority is not none display it
+            if(Priority != Priority.none)
             {
                 Console.Write($"{Priority}\n");
             }

@@ -6,14 +6,13 @@ namespace Todo_Application
 {
     class Validation
     {
-        //ensures user input is in the form of a number
         public static int ValidationStringtoInt(string UserInput)
         {
             try
             {
-                return int.Parse(UserInput); // return int if number
+                return int.Parse(UserInput); 
             }
-            catch (FormatException)// if not number recusive call until a number is entered
+            catch (FormatException)
             {
                 Console.WriteLine("Invalid menu choice. Please enter a numerical value...");
                 return ValidationStringtoInt(Console.ReadLine());

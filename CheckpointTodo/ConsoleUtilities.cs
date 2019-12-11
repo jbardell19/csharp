@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-//TODO Rename to COnsole Utility
 namespace Todo_Application
 {
     class ConsoleUtilities
     {
-        //writes Main Menu, retrieves user menu choice, and returns corresponding menu choice
         static public int MainMenu()
         {
             Console.Write($"Todo Organizer\n" +
@@ -17,8 +15,8 @@ namespace Todo_Application
                           $"4. Mark todo as complete\n" +
                           $"5. Sort Todo items\n" +
                           $"6. Exit program\n");
-            int choice = Validation.ValidationStringtoInt(Console.ReadLine()); // set choice to user menu choice of type int
-            choice = Validation.ValidationMenu(choice, 6); //ensures choice is between 1 and 8
+            int choice = Validation.ValidationStringtoInt(Console.ReadLine()); 
+            choice = Validation.ValidationMenu(choice, 6); 
             return choice;
         }
         public static Priority PriorityMenu()
@@ -28,8 +26,8 @@ namespace Todo_Application
                           $"1. Low\n" +
                           $"2. Medium\n" +
                           $"3. High\n");
-            int choice = Validation.ValidationStringtoInt(Console.ReadLine()); // set choice to user menu choice of type int
-            choice = Validation.ValidationMenu(choice, 3); //ensures choice is between 1 and 3
+            int choice = Validation.ValidationStringtoInt(Console.ReadLine()); 
+            choice = Validation.ValidationMenu(choice, 3); 
             if (choice == 1)
                 return Priority.low;
             else if (choice == 2)
@@ -49,8 +47,8 @@ namespace Todo_Application
                            $"5. Date (Descending)\n" +
                            $"6. Priority (Ascending)\n" +
                            $"7. Priority (Descending)\n" );
-            int choice = Validation.ValidationStringtoInt(Console.ReadLine()); // set choice to user menu choice of type int
-            choice = Validation.ValidationMenu(choice, 7); //ensures choice is between 1 and 8
+            int choice = Validation.ValidationStringtoInt(Console.ReadLine()); 
+            choice = Validation.ValidationMenu(choice, 7); //choice is between 1 and 8
             switch (choice)
             {
                 case 1:
@@ -87,8 +85,8 @@ namespace Todo_Application
                           $"4. Due Date\n" +
                           $"5. Priority\n" +
                           $"6. Return to Main Menu\n");
-            int choice = Validation.ValidationStringtoInt(Console.ReadLine()); // set choice to user menu choice of type int
-            choice = Validation.ValidationMenu(choice, 6); //ensures choice is between 1 and 8
+            int choice = Validation.ValidationStringtoInt(Console.ReadLine()); 
+            choice = Validation.ValidationMenu(choice, 6); 
             return choice;
         }
        

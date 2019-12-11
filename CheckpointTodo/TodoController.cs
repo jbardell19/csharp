@@ -6,12 +6,12 @@ using System.IO;
 using System.Linq;
 
 namespace Todo_Application
-{//TODO rename
+{
     class TodoController: DbContext
     {
-        public DbSet<Todo> Todos { get; set; } //Local copy of database
+        public DbSet<Todo> Todos { get; set; } 
 
-        //Database link
+        //DB link
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             DirectoryInfo ExecutionDirectory = new DirectoryInfo(AppContext.BaseDirectory);
@@ -19,13 +19,11 @@ namespace Todo_Application
             string DatabaseFile = Path.Combine(ProjectBase.FullName, "Todo.db");
             optionsBuilder.UseSqlite("Data Source =" + DatabaseFile);
         }
-        //display Todo by title
         public void DisplayByTitle()
         {
             
-            List<Todo> TempList = new List<Todo>(); // new list of Todo
+            List<Todo> TempList = new List<Todo>(); 
             
-
             foreach(Todo item in Todos)
             {
                 TempList.Add(item);

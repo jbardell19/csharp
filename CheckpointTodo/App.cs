@@ -38,6 +38,5 @@ namespace Todo_Application
                 Menu = ConsoleUtilities.MainMenu();
             }
         }
-        
     }
 }
