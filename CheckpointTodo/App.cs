@@ -1,65 +1,43 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
-namespace CheckPoint2_ToDo
+namespace Todo_Application
 {
 	class App
 	{
-		ItemRepository CallItemRep;
+		int Menu { get; set; }
+		Sort Order { get; set; }
 		public App()
 		{
-			CallItemRep = new ItemRepository();
-		}
-		public void CallsMethods()
-		{
-			string Task = ConsoleUtils.AskForToDo();
-			if (Task == "delete")
+			Order = Sort.Pending;
+			ConsoleUtilities.LinkDatabase();
+			Menu = ConsoleUtilities.MainMenu();
+			while (Menu != 6)
 			{
-				int GetId = ConsoleUtils.MethodDeleting();
-				CallItemRep.DeleteItem(GetId);
-			}
-			else if (Task == "add")
-			{
-				string[] addList = ConsoleUtils.MethodAdding();  ///task completed
-				CallItemRep.AddItem(addList[0], addList[1]);
-			}
-			else if (Task == "list done")
-			{
-				List<ToDoItem> DoneList = CallItemRep.ListDoneItem();
-				ConsoleUtils.PrintList(DoneList);
-			}
-			else if (Task == "pending list")
-			{
-				List<ToDoItem> PendingList = CallItemRep.ListPendingItem();
-				ConsoleUtils.PrintList(PendingList);
-			}
-			else if (Task == "all")
-			{
-				List<ToDoItem> AllList = CallItemRep.StoreInfo();
-				ConsoleUtils.PrintList(AllList);
-			}
-			else
-			{
-				Console.WriteLine("typing error, make sure all letters are lowercase");
+				switch (Menu)
+				{
+					case 1:
+						ConsoleUtilities.MenuCreateTodo();
+						break;
+					case 2:
+						ConsoleUtilities.MenuDeleteTodo();
+						break;
+					case 3:
+						ConsoleUtilities.EditMenu();
+						break;
+					case 4:
+						ConsoleUtilities.MenuCompleteTodo();
+						break;
+					case 5:
+						Order = ConsoleUtilities.SetSort(Order);
+						break;
+				}
+				Console.Clear();
+				ConsoleUtilities.SetDisplay(Order);
+				Menu = ConsoleUtilities.MainMenu();
 			}
 		}
-		public static bool EndProgram()
-		{
-			Console.WriteLine("Do you want to continue? 'y' to continue, 'n' to end");
-			string answer = Console.ReadLine();
-			if (answer == "y")
-			{
-				return true;
-			}
-			else if (answer == "n")
-			{
-				return false;
-			}
-			else
-				return true;
-		}
+
 	}
 }
