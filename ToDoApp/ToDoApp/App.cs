@@ -31,7 +31,7 @@ namespace ToDoApp
                     string Description = Console.ReadLine();
                     Console.WriteLine("Enter a Importance Status for item: (Low, Medium, High) ");
                     string Status = Console.ReadLine();
-                    Console.WriteLine("Enter a Due Date: month/day ");
+                    Console.WriteLine("Enter a Due Date: month/day/year ");
                     DateTime DueDate = Convert.ToDateTime(Console.ReadLine());
                     repo.AddItem(Description, Status, DueDate);
                 }
