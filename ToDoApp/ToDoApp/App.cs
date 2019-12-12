@@ -15,7 +15,7 @@ namespace ToDoApp
         }
         public void Run()
         {
-            string answer = ConsoleUtils.DisplayMenu();
+            string answer = ConsoleUtils.DisplayMenu(); //UI and Menu Display
             while (answer != "Q")
             {
                 if (answer == "L")
@@ -27,7 +27,7 @@ namespace ToDoApp
                 if (answer == "A")
                 {
                     Console.WriteLine("Add a Description: ");
-                    string Description = Console.ReadLine();
+                    string Description = Console.ReadLine(); //strings for input
                     Console.WriteLine("Enter a Importance Status for item: (Low, Medium, High) ");
                     string Status = Console.ReadLine();
                     Console.WriteLine("Enter a Due Date: month/day/year ");
