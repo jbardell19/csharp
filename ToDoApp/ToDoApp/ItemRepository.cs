@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.IO;
 using Microsoft.EntityFrameworkCore;
-
+//Super fun database stuff...do not break, it will crash the app
 namespace ToDoApp
 {
     public class ItemRepository
@@ -38,14 +38,12 @@ namespace ToDoApp
             context.Update(oldItem);
             context.SaveChanges();
         }
-
         public void DeleteItem(int id)
         {
             ToDoItems items = context.ToDoItems.Where(item => item.Id == id).FirstOrDefault();
             context.ToDoItems.Remove(items);
             context.SaveChanges();
         }
-
         public List<ToDoItems> Pending(int id)
         {
             IEnumerable<ToDoItems> list = context.ToDoItems.Where(item => item.Status == "Pending");
