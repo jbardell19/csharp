@@ -12,7 +12,7 @@ namespace ToDoApp
             Console.WriteLine("A: Add new Item");
             Console.WriteLine("U: Update an Item");
             Console.WriteLine("R: Remove an Item");
-            Console.WriteLine("Q: Exit program");
+            Console.WriteLine("Q: Quit program");
             Console.WriteLine("Please choose your option: ");
             string answer = Console.ReadLine().ToUpper();
             return answer;

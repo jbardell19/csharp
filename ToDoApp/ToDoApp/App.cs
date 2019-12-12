@@ -13,7 +13,6 @@ namespace ToDoApp
         {
             repo = new ItemRepository();
         }
-
         public void Run()
         {
             string answer = ConsoleUtils.DisplayMenu();
