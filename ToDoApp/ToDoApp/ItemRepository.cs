@@ -29,7 +29,7 @@ namespace ToDoApp
             context.SaveChanges();
         }
 
-        public void UpdateItem(int id, string newDescription, string newStatus, DateTime newDueDate)
+        public void UpdateItem(int id, string newDescription, string newStatus, DateTime newDueDate) //Update Item
         {
             ToDoItems oldItem = context.ToDoItems.Where(item => item.Id == id).FirstOrDefault();
             oldItem.Description = newDescription;
