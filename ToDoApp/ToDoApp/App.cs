@@ -15,7 +15,7 @@ namespace ToDoApp
         }
         public void Run()
         {
-            string answer = ConsoleUtils.DisplayMenu(); //UI and Menu Display
+            string answer = ConsoleUtils.DisplayMenu(); //UI and Menu Display after string
             while (answer != "Q")
             {
                 if (answer == "L")

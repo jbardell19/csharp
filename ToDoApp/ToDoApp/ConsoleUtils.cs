@@ -5,7 +5,7 @@ namespace ToDoApp
 {
     public class ConsoleUtils
     {
-        public static string DisplayMenu()
+        public static string DisplayMenu() //Main Menu
         {
             Console.WriteLine("Welcome to Your ToDo App. Choose an option and let's do this: ");
             Console.WriteLine("L: List all Items");
